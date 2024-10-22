@@ -1,0 +1,134 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #240046;
+    color: white;
+    flex-direction: column;
+    overflow: hidden; /* Ngăn cuộn dọc */
+}
+
+
+.container {
+    text-align: center;
+}
+
+#readyMessage {
+    font-size: 4rem;
+    color: #ff006e;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #ff006e, 0 0 20px #8338ec;
+}
+
+#startButton {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #8338ec;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#startButton:hover {
+    background-color: #ff006e;
+}
+
+#countdown {
+    font-size: 6rem;
+    color: #bb86fc;
+    animation: fade 1s ease-in-out infinite;
+    font-weight: bold;
+    text-shadow: 0 0 10px #bb86fc, 0 0 20px #ff006e, 0 0 30px #8338ec;
+}
+
+#customMessage {
+    font-size: 4rem;
+    color: #ff006e;
+    font-weight: bold;
+    transition: opacity 1s ease-in-out;
+    text-shadow: 0 0 10px #ff006e, 0 0 20px #8338ec;
+    margin-top: 10px;
+}
+
+#message {
+    font-size: 4rem;
+    color: #ff006e;
+    font-weight: bold;
+    transition: opacity 1s ease-in-out;
+    text-shadow: 0 0 10px #ff006e, 0 0 20px #8338ec;
+}
+
+#date {
+    font-size: 2rem;
+    color: #ff6b6b;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: opacity 1s ease-in-out;
+}
+
+#date1 {
+    font-size: 2rem;
+    color: #ff6b6b;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: opacity 1s ease-in-out;
+}
+
+#personImage, #birthdayImage {
+    max-width: 300px;
+    max-height: 300px;
+    margin-top: 20px;
+    border-radius: 50%;
+    border: 5px solid #ff006e;
+    box-shadow: 0 0 20px rgba(255, 0, 110, 0.8);
+    transition: opacity 1s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+/* .hidden1 {
+    opacity: 1;
+} */
+
+
+
+.visible {
+    opacity: 1;
+}
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff006e;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
